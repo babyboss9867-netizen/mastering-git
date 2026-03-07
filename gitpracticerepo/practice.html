@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Simple Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f0f4ff, #dfe9ff);
+            margin: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2a2a2a;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #444;
+            font-size: 1.1rem;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #4a6cff;
+            color: white;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #3a56d4;
+        }
+
+        #message {
+            margin-top: 25px;
+            font-size: 1.2rem;
+            color: #2a2a2a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome!</h1>
+    <p>Here’s a simple, styled page with a little interactivity.</p>
+
+    <button onclick="showMessage()">Click me</button>
+
+    <div id="message"></div>
+
+    <script>
+        function showMessage() {
+            const messages = [
+                "You clicked the button!",
+                "Nice! Want to click again?",
+                "Buttons are fun.",
+                "You're on a roll.",
+                "Look at you go!"
+            ];
+            const random = Math.floor(Math.random() * messages.length);
+            document.getElementById("message").textContent = messages[random];
+        }
+    </script>
+
+</body>
+</html>
